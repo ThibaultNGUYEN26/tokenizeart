@@ -1,0 +1,20 @@
+{
+  "name": "TokenizeArt42 - Sunset Over 42",
+  "description": "An ERC-721 NFT created for the 42 TokenizeArt project.",
+  "artist": "thibnguy",
+  "image": "ipfs://bafybeifa3ss6b4b5bqw52c3o6rvbf7fl4boqxl7kydtujczrj46joopjze",
+  "attributes": [
+    {
+      "trait_type": "Project",
+      "value": "TokenizeArt"
+    },
+    {
+      "trait_type": "Series",
+      "value": "42"
+    },
+    {
+      "trait_type": "Title",
+      "value": "Sunset Over 42"
+    }
+  ]
+}
