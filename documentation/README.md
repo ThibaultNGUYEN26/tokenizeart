@@ -31,9 +31,9 @@ The project is educational and intended to show the complete workflow of an NFT:
 - **Development Tools**: Remix IDE, MetaMask, Sepolia Etherscan, IPFS
 - **Contract Name**: TokenizeArt42
 - **Symbol**: T42A
-- **Mint Function**: `mintArtwork(address to, string metadataURI)`
+- **Mint Function**: `mintArtwork(address to)`
 
-The contract is based on `ERC721URIStorage`, which allows each NFT to store its own metadata URI.
+The contract is based on `ERC721URIStorage`, with a single metadata URI hardcoded in the contract so that only the project NFT can be minted.
 
 ---
 
@@ -54,13 +54,14 @@ Example metadata structure:
 
 ```json
 {
-  "name": "TokenizeArt42 - Soaring Eagle",
+  "name": "TokenizeArt42 - Sunset Over 42",
   "description": "An ERC-721 NFT created for the 42 TokenizeArt project.",
   "artist": "thibnguy",
-  "image": "ipfs://<IMAGE_CID>/tokenizeart42.png",
+  "image": "ipfs://bafybeifa3ss6b4b5bqw52c3o6rvbf7fl4boqxl7kydtujczrj46joopjze",
   "attributes": [
     { "trait_type": "Project", "value": "TokenizeArt" },
-    { "trait_type": "Series", "value": "42" }
+    { "trait_type": "Series", "value": "42" },
+    { "trait_type": "Title", "value": "Sunset Over 42" }
   ]
 }
 ```
@@ -84,14 +85,14 @@ This makes the security model simple and explicit during evaluation.
 
 ### Deploy
 
-Deploy `TokenizeArt42` on Sepolia with your wallet address as the constructor owner.
+Deploy `TokenizeArt42` on Sepolia with your wallet address as the constructor owner. The metadata URI is already hardcoded in the contract.
 
 ### Mint
 
 Call:
 
 ```text
-mintArtwork(walletAddress, ipfs://<METADATA_CID>/tokenizeart42.json)
+mintArtwork(walletAddress)
 ```
 
 ### Verify

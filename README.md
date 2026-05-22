@@ -47,10 +47,10 @@ This makes privileges explicit:
 The subject requires the image to be stored using distributed registry technology.
 For that reason, the artwork image and metadata should be uploaded to **IPFS**.
 
-The contract stores a metadata URI such as:
+The contract stores a fixed metadata URI:
 
 ```text
-ipfs://<METADATA_CID>/tokenizeart42.json
+ipfs://bafkreiajvjbrav5sk4zkavawvwflaxbmd4wi5aksn2ez3beppsu3q35i47lq
 ```
 
 That metadata file should contain:
@@ -60,10 +60,12 @@ That metadata file should contain:
 - the artist name, which must be your login
 - the image URI on IPFS
 
+The current contract is hardcoded to mint this single NFT only. The owner can mint once, and the token URI is fixed in the Solidity code.
+
 ## Deployment Result
 
 - Network: Ethereum Sepolia
-- Contract address: `0x38aBAc795AcBB63571BfFd52F5e6442756e0e4c1`
+- Contract address: replace with the current address of the one-NFT-only contract after redeployment
 
 ## Repository Structure
 

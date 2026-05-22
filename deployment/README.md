@@ -13,10 +13,10 @@ Before minting, upload:
 - the artwork image
 - the metadata JSON file
 
-Example metadata URI:
+Current metadata URI:
 
 ```text
-ipfs://<METADATA_CID>/tokenizeart42.json
+ipfs://bafkreiajvjbrav5sk4zkavawvwflaxbmd4wi5aksn2ez3beppsu3q35i47lq
 ```
 
 ## 3. Compile the Contract
@@ -30,7 +30,7 @@ tokenizeart/code/TokenizeArt42.sol
 Compiler version:
 
 ```text
-0.8.20
+0.8.24
 ```
 
 ## 4. Deploy the Contract
@@ -50,13 +50,14 @@ Constructor argument:
 Call:
 
 ```text
-mintArtwork(to, metadataURI)
+mintArtwork(to)
 ```
 
 Example:
 
 - `to`: your wallet address
-- `metadataURI`: `ipfs://<METADATA_CID>/tokenizeart42.json`
+
+The metadata URI is already hardcoded in the contract, so it is not passed during minting.
 
 The first minted NFT will usually have:
 
@@ -71,6 +72,12 @@ Use:
 - `ownerOf(0)`
 - `tokenURI(0)`
 - `nextTokenId()`
+
+Expected:
+
+- `ownerOf(0)`: your wallet address
+- `tokenURI(0)`: `ipfs://bafkreiajvjbrav5sk4zkavawvwflaxbmd4wi5aksn2ez3beppsu3q35i47lq`
+- `nextTokenId()`: `1`
 
 ## 7. Verify the Contract on Etherscan
 

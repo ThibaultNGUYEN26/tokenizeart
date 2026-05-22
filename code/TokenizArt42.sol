@@ -9,14 +9,11 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 // and privilege model explicit during evaluation.
 contract TokenizeArt42 is ERC721URIStorage, Ownable {
     uint256 private _nextTokenId;
-    string private _artworkURI;
+    string private constant ARTWORK_URI = "ipfs://bafkreicbvt6znq5exrj3wgdm3q3a6vgqey4xwl4bzpkkwnmu7i2u6b6dey";
 
     event ArtworkMinted(address indexed to, uint256 indexed tokenId, string tokenURI);
 
-    constructor(address initialOwner, string memory metadataURI) ERC721("TokenizeArt42", "T42A") Ownable(initialOwner) {
-        require(bytes(metadataURI).length > 0, "metadata required");
-        _artworkURI = metadataURI;
-    }
+    constructor(address initialOwner) ERC721("TokenizeArt42", "T42A") Ownable(initialOwner) {}
 
     // Mints the single project NFT with the metadata URI fixed at deployment.
     function mintArtwork(address to) external onlyOwner returns (uint256) {
@@ -27,9 +24,9 @@ contract TokenizeArt42 is ERC721URIStorage, Ownable {
         _nextTokenId += 1;
 
         _safeMint(to, tokenId);
-        _setTokenURI(tokenId, _artworkURI);
+        _setTokenURI(tokenId, ARTWORK_URI);
 
-        emit ArtworkMinted(to, tokenId, _artworkURI);
+        emit ArtworkMinted(to, tokenId, ARTWORK_URI);
         return tokenId;
     }
 
