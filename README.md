@@ -56,7 +56,7 @@ For that reason, the artwork image and metadata should be uploaded to **IPFS**.
 The contract stores a fixed metadata URI:
 
 ```text
-ipfs://bafkreiajvjbrav5sk4zkavawvwflaxbmd4wi5aksn2ez3beppsu3q35i47lq
+ipfs://bafkreicbvt6znq5exrj3wgdm3q3a6vgqey4xwl4bzpkkwnmu7i2u6b6dey
 ```
 
 That metadata file should contain:

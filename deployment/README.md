@@ -11,7 +11,7 @@ The current contract is designed to mint only one NFT:
 The hardcoded metadata URI used by the contract is:
 
 ```text
-ipfs://bafkreiajvjbrav5sk4zkavawvwflaxbmd4wi5aksn2ez3beppsu3q35i47lq
+ipfs://bafkreicbvt6znq5exrj3wgdm3q3a6vgqey4xwl4bzpkkwnmu7i2u6b6dey
 ```
 
 ## 1. What You Need Before Starting
@@ -20,7 +20,7 @@ You need:
 
 - a MetaMask wallet
 - Sepolia ETH for gas fees
-- the `TokenizArt42.sol` contract
+- the `TokenizeArt42.sol` contract
 - the NFT image already uploaded to IPFS
 - the NFT metadata JSON already uploaded to IPFS
 
@@ -38,7 +38,7 @@ Before deploying, make sure the NFT metadata is already correct because the cont
 The metadata file used by the contract is:
 
 ```text
-ipfs://bafkreiajvjbrav5sk4zkavawvwflaxbmd4wi5aksn2ez3beppsu3q35i47lq
+ipfs://bafkreicbvt6znq5exrj3wgdm3q3a6vgqey4xwl4bzpkkwnmu7i2u6b6dey
 ```
 
 The image used inside the metadata is:
@@ -56,7 +56,7 @@ Check that:
 Example gateway format:
 
 ```text
-https://ipfs.io/ipfs/bafkreiajvjbrav5sk4zkavawvwflaxbmd4wi5aksn2ez3beppsu3q35i47lq
+https://ipfs.io/ipfs/bafkreicbvt6znq5exrj3wgdm3q3a6vgqey4xwl4bzpkkwnmu7i2u6b6dey
 ```
 
 If the metadata is wrong, fix it before deployment. Since the URI is hardcoded in the contract, a wrong CID means you must edit the contract and redeploy.
@@ -93,13 +93,13 @@ Example:
 
 - image CID: `bafybeifa3ss6b4b5bqw52c3o6rvbf7fl4boqxl7kydtujczrj46joopjze`
 - image URI: `ipfs://bafybeifa3ss6b4b5bqw52c3o6rvbf7fl4boqxl7kydtujczrj46joopjze`
-- metadata CID: `bafkreiajvjbrav5sk4zkavawvwflaxbmd4wi5aksn2ez3beppsu3q35i47lq`
-- metadata URI: `ipfs://bafkreiajvjbrav5sk4zkavawvwflaxbmd4wi5aksn2ez3beppsu3q35i47lq`
+- metadata CID: `bafkreicbvt6znq5exrj3wgdm3q3a6vgqey4xwl4bzpkkwnmu7i2u6b6dey`
+- metadata URI: `ipfs://bafkreicbvt6znq5exrj3wgdm3q3a6vgqey4xwl4bzpkkwnmu7i2u6b6dey`
 
 If Pinata gives you a gateway link such as:
 
 ```text
-https://gateway.pinata.cloud/ipfs/bafkreiajvjbrav5sk4zkavawvwflaxbmd4wi5aksn2ez3beppsu3q35i47lq
+https://gateway.pinata.cloud/ipfs/bafkreicbvt6znq5exrj3wgdm3q3a6vgqey4xwl4bzpkkwnmu7i2u6b6dey
 ```
 
 then the metadata CID is simply the part after `/ipfs/`.
@@ -120,7 +120,7 @@ This wallet address will be used:
 
 1. Open `https://remix.ethereum.org`.
 2. In the File Explorer, create a new file named `TokenizeArt42.sol`.
-3. Open [code/TokenizArt42.sol](/home/thibnguy/42/tokenizeart/code/TokenizArt42.sol:1) from this repository.
+3. Open [code/TokenizeArt42.sol](/home/thibnguy/42/tokenizeart/code/TokenizeArt42.sol:1) from this repository.
 4. Copy the full content of that file.
 5. Paste it into the Remix file.
 
@@ -210,7 +210,7 @@ After minting, call these functions on the deployed contract:
 Expected results:
 
 - `ownerOf(0)` returns your wallet address
-- `tokenURI(0)` returns `ipfs://bafkreiajvjbrav5sk4zkavawvwflaxbmd4wi5aksn2ez3beppsu3q35i47lq`
+- `tokenURI(0)` returns `ipfs://bafkreicbvt6znq5exrj3wgdm3q3a6vgqey4xwl4bzpkkwnmu7i2u6b6dey`
 - `nextTokenId()` returns `1`
 
 These three calls are enough to show:
