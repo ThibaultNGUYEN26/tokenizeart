@@ -2,12 +2,21 @@
 
 ## Goal
 
-`TokenizeArt` is the NFT version of the `tokenizer` project.
+`TokenizeArt` is the NFT version of the `Tokenizer` project.
 It creates a non-fungible token on Ethereum Sepolia using the `ERC-721` standard and stores the artwork metadata through distributed storage such as IPFS.
 
 The name contains `42`, as required by the subject.
 
 ## Technical Choices
+
+I made the same main technical choices as in the `Tokenizer` project in order to keep a familiar workflow and tools:
+
+- `Solidity` for the smart contract
+- `Remix IDE` to write, compile, and deploy the contract
+- `MetaMask` to connect my wallet and sign transactions
+- `Ethereum Sepolia` as the public test network
+
+This choice allowed me to reuse the same development approach while adapting it to an NFT project based on the `ERC-721` standard.
 
 ### Blockchain: Ethereum Sepolia
 
@@ -27,10 +36,7 @@ These functions make it possible to prove ownership and inspect NFT metadata dur
 
 ### Language and Tools
 
-- **Solidity** for the smart contract
 - **OpenZeppelin** for audited ERC-721 building blocks
-- **Remix IDE** for compilation and deployment
-- **MetaMask** for signing transactions
 - **Sepolia Etherscan** for contract verification and NFT inspection
 
 ### Ownership and Privileges
@@ -65,7 +71,13 @@ The current contract is hardcoded to mint this single NFT only. The owner can mi
 ## Deployment Result
 
 - Network: Ethereum Sepolia
-- Contract address: replace with the current address of the one-NFT-only contract after redeployment
+- Contract address: `0xd13fCD49fe5f3cA6569a80BEFa16b3aF50Ab543F`
+
+## Bonus Deployment Result
+
+- Network: Ethereum Sepolia
+- Bonus contract address: `0x0edb1f1be1D342687813FFc1f8054A9aEa61b442`
+- Bonus contract file: [code/TokenizeArt42_bonus.sol](/home/thibnguy/42/tokenizeart/code/TokenizeArt42_bonus.sol:1)
 
 ## Repository Structure
 

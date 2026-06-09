@@ -31,9 +31,17 @@ The project is educational and intended to show the complete workflow of an NFT:
 - **Development Tools**: Remix IDE, MetaMask, Sepolia Etherscan, IPFS
 - **Contract Name**: TokenizeArt42
 - **Symbol**: T42A
+- **Contract Address**: `0xd13fCD49fe5f3cA6569a80BEFa16b3aF50Ab543F`
 - **Mint Function**: `mintArtwork(address to)`
 
 The contract is based on `ERC721URIStorage`, with a single metadata URI hardcoded in the contract so that only the project NFT can be minted.
+
+Bonus on-chain version:
+
+- **Bonus Contract Name**: `TokenizeArt42Bonus`
+- **Bonus Symbol**: `T42B`
+- **Bonus Contract Address**: `0x0edb1f1be1D342687813FFc1f8054A9aEa61b442`
+- **Bonus Storage Model**: metadata and image stored fully on-chain
 
 ---
 
