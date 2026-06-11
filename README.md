@@ -72,6 +72,7 @@ The current contract is hardcoded to mint this single NFT only. The owner can mi
 
 - Network: Ethereum Sepolia
 - Contract address: `0xd13fCD49fe5f3cA6569a80BEFa16b3aF50Ab543F`
+- Token ID: `0`
 
 ## Bonus Deployment Result
 
